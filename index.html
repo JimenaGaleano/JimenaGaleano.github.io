@@ -7,6 +7,9 @@
     <title>Portfolio</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Source+Serif+Pro:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
     <style>
         body {
             margin: 0;
@@ -16,6 +19,30 @@
         :root {
             --terracotta: #D68A6A;
             --blue: #0A1A2F;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: "Montserrat", sans-serif;
+        }
+
+        body,
+        p,
+        label,
+        input,
+        button {
+            font-family: "Source Serif Pro", serif;
+        }
+
+        p strong {
+            font-weight: 700;
+            /* or 600 for a softer bold */
+            font-family: "Source Serif Pro", serif;
+        }
+
+        ul li::marker {
+            color: var(--terracotta);
         }
 
         .navbar {
@@ -60,6 +87,7 @@
 </head>
 
 <body>
+    <!-- navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">Jimena Galeano</a>
@@ -87,7 +115,7 @@
                         <a class="nav-link" href="#Contact">Contact</a>
                     </li>
                     <li class="Fun Facts">
-                        <a class="nav-link" href="#FunFacts">Fun Facts</a>
+                        <a class="nav-link" href="#Facts">Other</a>
                     </li>
                 </ul>
             </div>
@@ -108,9 +136,9 @@
 
             <!-- RIGHT SIDE — Title -->
             <div class="col-md-6 d-flex align-items-center p-0">
-                <div class="title-box" style= color:var(--blue);>
+                <div class="title-box" style=color:var(--blue);>
                     <h1>My <br>
-                    Portfolio</h1>
+                        Portfolio</h1>
                     <br>
                     <div class="col-10">
                         <p>
@@ -126,73 +154,107 @@
         </div>
     </div>
 
-    <!-- education -->
+    <!-- EDUCATION -->
     <div id="education" class="container my-5">
         <div class="p-5 rounded" style="background-color: var(--blue); color: white;">
 
-            <!-- Title inside the box -->
             <h1 class="text-center mb-5">EDUCATION</h1>
 
+            <!-- white boxes -->
             <div class="row g-4">
+
                 <!-- UWC -->
                 <div class="col-md-6">
                     <div class="p-4 rounded" style="background-color: white; color: var(--blue);">
-                        <div class="row">
-                            <h2 class="text-center fw-bold">High School</h2>
-                            <!-- TEXT -->
+                        <h2 class="text-center fw-bold mb-3">High School</h2>
+                        <div class="row mb-3">
                             <div class="col-8">
                                 <p>
                                     UWC Red Cross Nordic, Flekke, Norway<br>
                                     International Baccalaureate<br>
                                     2022-2024<br>
-                                    Awarded scholarship Dare to Dream
+                                    Awarded Scholarship "Dare to Dream"
                                 </p>
                             </div>
-
-                            <!-- IMAGE -->
                             <div class="col-4 d-flex justify-content-center align-items-center">
                                 <img src="pictures/uwc_logo.jpeg" alt="UWC Logo"
                                     style="width: 100%; max-width: 95px; height: auto; border-radius: 8px;">
                             </div>
-
+                        </div>
+                        <!-- Carousel -->
+                        <div id="uwcCarousel" class="carousel slide"
+                            style="width: 100%; max-width: 350px; margin:auto;">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="pictures/education/RCN1.jpeg" class="d-block w-100" alt="">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="pictures/education/RCN2.jpeg" class="d-block w-100" alt="">
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#uwcCarousel"
+                                data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon"></span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#uwcCarousel"
+                                data-bs-slide="next">
+                                <span class="carousel-control-next-icon"></span>
+                            </button>
                         </div>
                     </div>
                 </div>
 
-                <!-- slu -->
+                <!-- SLU -->
                 <div class="col-md-6">
                     <div class="p-4 rounded" style="background-color: white; color: var(--blue);">
-                        <div class="row">
-                            <h2 class="text-center fw-bold">College</h2>
-                            <!-- TEXT  -->
+                        <h2 class="text-center fw-bold mb-3">College</h2>
+                        <div class="row mb-3">
                             <div class="col-8">
-                                <p>St. Lawrence University, Canton, NY<br>
+                                <p>
+                                    St. Lawrence University, Canton, NY<br>
                                     Data Science Major<br>
                                     Political Science Minor<br>
                                     2024–2028
                                 </p>
                             </div>
-
-                            <!-- IMAGE -->
                             <div class="col-4 d-flex justify-content-center align-items-center">
                                 <img src="pictures/slu_logo.jpeg" alt="SLU Logo"
                                     style="width: 100%; max-width: 95px; height: auto; border-radius: 8px;">
                             </div>
-
+                        </div>
+                        <!-- Carousel -->
+                        <div id="sluCarousel" class="carousel slide"
+                            style="width: 100%; max-width: 350px; margin:auto;">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="pictures/education/SLU1.jpeg" class="d-block w-100" alt="">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="pictures/education/SLU2.jpeg" class="d-block w-100" alt="">
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#sluCarousel"
+                                data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon"></span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#sluCarousel"
+                                data-bs-slide="next">
+                                <span class="carousel-control-next-icon"></span>
+                            </button>
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </div>
 
+    <!-- SKILLS -->
     <div id="skills" class="container my-5">
         <div class="p-5 rounded" style="border: 4px solid white; background-color: transparent;">
 
             <h1 class="text-center mb-5" style="color: var(--blue);">SKILLS</h1>
 
-            <div class="row justify-content-start text-center" style="color: var(--blue)" >
+            <div class="row justify-content-start text-center" style="color: var(--blue)">
 
 
                 <!-- Programming Languages -->
@@ -261,7 +323,7 @@
                 <!-- Project 2 -->
                 <div class="col-md-6">
                     <div class="p-4 rounded" style="background-color: white; color: var(--blue);">
-                        <h2 class="text-center fw-bold">Learning How to Built a Website</h2>
+                        <h2 class="text-center fw-bold">How to Built a Website</h2>
                         <p class="text-center">
                             <a class="text-center" href="https://jimenagaleano.github.io/cs3017-f25/">First try</a>
                         </p>
@@ -319,35 +381,124 @@
     <div id="Contact" class="container my-5">
         <div class="p-5 rounded" style="background-color: var(--blue); color: white;">
 
-            <!-- Title inside the box -->
-            <h1 class="text-center mb-5">CONTACT</h1>
+            <h1 class="text-center mb-5">CONNECT WITH ME</h1>
 
             <div class="row g-4">
-                <form action="https://api.web3forms.com/submit" method="POST">
-                    <input type="hidden" name="access_key" value="a58d2346-733f-4d36-a04f-f920d057d0e8">
-                    <label for="name"> Name: </label>
-                    <input type="text" name="name" id="name">
 
-                    <br> <br>
+                <!--form-->
+                <div class="col-md-6">
+                    <div class="p-4 rounded" style="background-color: var(--blue); color: white;">
+                        <form action="https://api.web3forms.com/submit" method="POST">
+                            <input type="hidden" name="access_key" value="a58d2346-733f-4d36-a04f-f920d057d0e8">
+                            <label for="name"> Name: </label>
+                            <input type="text" name="name" id="name" class="form-control mb-3" rows="4">
 
-                    <label for="email">Email:</label>
-                    <input type="email" name="email" id="email">
+                            <br>
 
-                    <br> <br>
+                            <label for="email">Email:</label>
+                            <input type="email" name="email" id="email" class="form-control mb-3" rows="4">
+
+                            <br>
+
+                            <label for="message">Message: </label>
+                            <textarea name="message" id="message" class="form-control mb-3" rows="4"></textarea>
+
+                            <br>
+                            <input type="submit" value="Submit">
+                        </form>
+                    </div>
+                </div>
 
 
-                    <label for="message">Message: </label>
-                    <input type="text" name="message" id="message">
+                <!-- SOCIAL MEDIA / OTHER CONTACT -->
+                <div class="col-md-6">
+                    <div class="p-4 rounded" style="background-color: white; color: var(--blue);">
+                        <h2 class="text-center fw-bold mb-4">Other ways</h2>
 
-                    <br> <br>
-                    <input type="submit" value="Submit">
-                </form>
+                        <p class="text-center">
+                            Email: <strong>jdgale24@stlawu.edu</strong>
+                            <br><br><br>
+                            Location: <strong>Canton, NY</strong>
+                            <br><br><br>
+                            Linkedin: <strong>Jimena Galeano</strong>
+                            <br><br>
+                        </p>
+
+                        <div class="d-flex justify-content-center gap-4 mt-4">
+                            <a href="https://www.linkedin.com/in/jimenagaleano" target="_blank">
+                                <img src="pictures/icons/linkedin.jpeg" width="45">
+                            </a>
+                            <a href="https://github.com/jimenagaleano" target="_blank">
+                                <img src="pictures/icons/github.jpeg" width="45">
+                            </a>
+                            <a href="mailto:jgalea23@stlawu.edu">
+                                <img src="pictures/icons/email.jpeg" width="45">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
             </div>
+
         </div>
     </div>
 
-    <!-- What I am looking for 
-     How to incorporate differet fonts 
-     How to make animations -->
+    <!-- Fun Facts -->
+    <div id="Facts" class="container my-5">
+        <div class="p-5 rounded" style="background-color: white; color: var(--blue);">
+            <h1 class="text-center mb-5">Other facts</h1>
 
+            <div class="row g-4 align-items-center">
+
+                <!-- Fun facts -->
+                <div class="col-md-6">
+                    <div class="p-4 rounded" style="background-color: white; color: var(--blue);">
+                        <ul class="fs-5">
+                            <li>Languages I speak: English, Spanish, and Italian</li>
+                            <li>I have live in 3 different countries: Guatemala, Norway and US</li>
+                            <li>I am Kayak and belayed for climbing certified</li>
+                            <li>I love taking and editing photos</li>
+                            <li>I collect poscards from every country I visit.</li>
+
+                        </ul>
+                    </div>
+                </div>
+
+                <!--carrousel-->
+                <div class="col-md-6">
+                    <div id="facts" class="carousel slide" style="width:350px; margin:auto;">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#facts" data-bs-slide-to="0" class="active"
+                                aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#facts" data-bs-slide-to="1"
+                                aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#facts" data-bs-slide-to="2"
+                                aria-label="Slide 3"></button>
+                        </div>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="pictures/facts/fact1.jpeg" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="pictures/facts/fact2.jpeg" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="pictures/facts/fact4.jpeg" class="d-block w-100" alt="...">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#facts"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#facts"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>    
 </body>
